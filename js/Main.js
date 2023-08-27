@@ -12,8 +12,8 @@ function themNhanVien() {
     var chucVu = document.getElementById("chucvu").value;
     var gioLam = document.getElementById("gioLam").value;
     var isValid = true;
-    isValid &= Validation.checkEmpty(taiKhoan, "Tài Khoản viên không được để trống", "tbTKNV") && Validation.checkTK(taiKhoan, "Tài khoản viên không hợp lệ ", "tbTKNV");
-    isValid &= Validation.checkEmpty(taiKhoan, "Tài Khoản viên không được để trống", "tbTKNV") && Validation.checkTKTrung(taiKhoan, "Tài khoản viên không được trùng ", "tbTKNV", dsnv.mangNV);
+    isValid &= Validation.checkEmpty(taiKhoan, "Tài Khoản viên không được để trống", "tbTKNV") && Validation.checkTK(taiKhoan, "Tài khoản viên không hợp lệ ", "tbTKNV", dsnv.mangNV) && Validation.checkTKTrung(taiKhoan, "Tài khoản viên không được trùng ", "tbTKNV", dsnv.mangNV);
+    // isValid &= Validation.checkEmpty(taiKhoan, "Tài Khoản viên không được để trống", "tbTKNV") ;
     isValid &= Validation.checkEmpty(hoTen, "Họ tên không được để trống", "tbTen") && Validation.checkHoTen(hoTen, "Họ tên không hợp lệ", "tbTen");
     isValid &= Validation.checkEmpty(email, "Email không được để trống", "tbEmail") && Validation.checkEmail(email, "Email không hợp lệ", "tbEmail");
     isValid &= Validation.checkEmpty(matKhau, "Mật khẩu không được để trống", "tbMatKhau") && Validation.checkMatKhau(matKhau, "Mật khẩu từ 6-10 ký tự chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt", "tbMatKhau");

@@ -7,7 +7,7 @@ function DanhSachNhanVien() {
         var indexXoa = this.mangNV.findIndex(function (nhanVien) {
             return nhanVien.taiKhoan == tkXoa;
         });
-        this.mangNV.splice(indexXoa, 1)
+        this.mangNV.splice(indexXoa, 1);
     }
     this.xemNhanVien = function (tkXem) {
         var nvFind = this.mangNV.find(function (nhanVien) {
