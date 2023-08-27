@@ -97,6 +97,7 @@ function capNhatNV() {
     var chucVu = document.getElementById("chucvu").value;
     var gioLam = document.getElementById("gioLam").value;
     var isValid = true;
+    isValid &= Validation.checkEmpty(hoTen, "Họ tên không được để trống", "tbTen") && Validation.checkHoTen(hoTen, "Họ tên không hợp lệ", "tbTen");
     isValid &= Validation.checkEmpty(email, "Email không được để trống", "tbEmail") && Validation.checkEmail(email, "Email không hợp lệ", "tbEmail");
     isValid &= Validation.checkEmpty(matKhau, "Mật khẩu không được để trống", "tbMatKhau") && Validation.checkMatKhau(matKhau, "Mật khẩu từ 6-10 ký tự chứa ít nhất 1 ký tự số, 1 ký tự in hoa, 1 ký tự đặc biệt", "tbMatKhau");
     isValid &= Validation.checkEmpty(ngayLam, "Ngày làm không được bỏ trống", "tbNgay") && Validation.checkNgay(ngayLam, "Ngày làm không hợp lệ", "tbNgay");
